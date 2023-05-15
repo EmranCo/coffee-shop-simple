@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="loogoo.icon">
+
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div id="production-btn" class="fas fa-bars"></div>
+
+    <a href="#" class="logo">
+        <img src="image/logo.jpeg" alt="logo">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="history.html">history</a>
+        <a href="products.html">Products</a>
+        <a href="machines.html">Machines</a>
+        <a href="login.html">Log in</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+</header>
+<!-- Log in section  -->
+<section class="login" id="login">
+ <div class="box-container">
+     <h1 class="heading"> Log in <span>to your account</span> </h1>
+
+         <div class="content">
+
+             <form action="login.php" method="POST">
+                 <div class="inputBox">
+                     <label for="username">Username</label>
+                     <input type="text" id="username" name="username" required="required">
+
+                 </div>
+                 <div class="inputBox">
+                     <label for="password">Password</label>
+                     <input type="password" id="password" name="password" required="required">
+
+                 </div>
+                 <div class="inputBox">
+                    <input type="submit" name="submit" class="btn" value="Log in">
+                 </div>
+                 
+             </form>
+         </div>
+     </div>
+
+
+</section>
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
