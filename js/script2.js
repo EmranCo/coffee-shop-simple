@@ -10,19 +10,21 @@ const confirmPassword = document.getElementById("confirm-password");
 const requiredFields = form.querySelectorAll("[data-required]");
 
 requiredFields.forEach((field) => {
-  
   field.addEventListener("change", function () {
-    if (field == confirmPassword) return validatePasswordMatch(password, confirmPassword);
+    if (field == confirmPassword)
+      return validatePasswordMatch(password, confirmPassword);
     validateInput(field);
   });
 
   field.addEventListener("blur", function () {
-    if (field == confirmPassword) return validatePasswordMatch(password, confirmPassword);
+    if (field == confirmPassword)
+      return validatePasswordMatch(password, confirmPassword);
     validateInput(field);
   });
 
   field.addEventListener("input", function () {
-    if (field == confirmPassword) return validatePasswordMatch(password, confirmPassword);
+    if (field == confirmPassword)
+      return validatePasswordMatch(password, confirmPassword);
     validateInput(field);
   });
 });
@@ -37,11 +39,24 @@ form.addEventListener("submit", function (event) {
     validateInput(password) &&
     validateInput(confirmPassword) &&
     validatePasswordMatch(password, confirmPassword)
-  )
-    {
-        form.classList.add("was-validated");
-    }
-  else {
+  ) {
+    form.classList.add("was-validated");
+
+    // show success message using SweetAlert
+    event.preventDefault();
+
+    Swal.fire({
+      title: "Success!",
+      text: "You have been registered.",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      // redirect to home page when OK button is clicked
+      if (result.isConfirmed) {
+        window.location.href = "index.html";
+      }
+    });
+  } else {
     event.preventDefault();
     event.stopPropagation();
     form.reportValidity();
@@ -67,7 +82,7 @@ function validatePasswordMatch(password, confirmPassword) {
     confirmPassword.classList.add("is-invalid");
     confirmPassword.nextElementSibling.style.display = "block";
     return false;
-} else {
+  } else {
     confirmPassword.classList.remove("is-invalid");
     confirmPassword.nextElementSibling.style.display = "none";
     confirmPassword.classList.add("is-valid");

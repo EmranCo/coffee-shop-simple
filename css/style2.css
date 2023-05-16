@@ -57,3 +57,33 @@
     background-color: #0062cc;
     border-color: #005cbf;
   }
+
+  .swal2-container *{
+    font-family: initial;
+    margin: auto;
+    padding: initial;
+    box-sizing: initial;
+    outline: initial;
+    border: initial;
+    text-decoration: initial;
+    text-transform: initial;
+    transition: initial;
+    font-size: initial
+}
+
+  .swal2-popup {
+    border-radius: 10px;
+    font-size: 2rem !important;
+
+  }
+  
+  .swal2-title {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .swal2-content {
+    font-size: 18px;
+  }
+  
+
