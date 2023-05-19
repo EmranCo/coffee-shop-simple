@@ -16,6 +16,7 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
 
 </head>
 
@@ -41,84 +42,101 @@
         </nav>
 
     </header>
+
+
     <!-- Register section  -->
     <section class="register" id="register">
         <div class="box-container">
             <h1 class="heading"> Register <span>new account</span> </h1>
-
             <div class="content">
-
-                <form  action="register.php" method="POST" id="register-form">
-                    <div class="form-group inputBox">
-                        <label for="full-name">Full Name</label>
-                        <input type="text" class="form-control" id="full-name" name="full-name" data-required>
-                        <div class="invalid-feedback">
-                            Please enter your full name.
+                <div class="signup-form">
+                    <form action="register.php" method="POST" id="register-form">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First Name" id="first-name"
+                                        name="first-name" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter your first name.
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last Name" id="last-name"
+                                        name="last-name" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter your last name.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group inputBox">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" data-required>
-                        <div class="invalid-feedback">
-                            Please enter a valid email address.
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="email" class="form-control" id="email" placeholder="Email address"
+                                        name="email" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone"
+                                        name="phone" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid phone number.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group inputBox">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" data-required>
-                        <div class="invalid-feedback">
-                            Please enter a valid phone number.
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" id="gender" name="gender" data-required>
+                                        <option value="">-- Please select gender --</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other / Prefer not to say</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select your gender.
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="date" class="form-control" placeholder="Date of Birth" id="dob"
+                                        name="dob" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter your date of birth.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group inputBox">
-                        <label for="gender">Gender</label>
-                        <select class="form-control" id="gender" name="gender" data-required>
-                            <option value="">-- Please select --</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other / Prefer not to say</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select your gender.
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="password" class="form-control" placeholder="Password" id="password"
+                                        name="password" data-required>
+                                    <div class="invalid-feedback">
+                                        Please enter a password.
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="password" class="form-control" placeholder="Confirm Password" id="confirm-password"
+                                        name="confirm-password" data-required>
+                                    <div class="invalid-feedback">
+                                        Please confirm your password.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group inputBox">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob" name="dob" data-required>
-                        <div class="invalid-feedback">
-                            Please enter your date of birth.
+                        <div class="form-group">
+                            <button type="submit" class="btn  btn-lg" style="">Register</button>
                         </div>
-                    </div>
-
-                    <div class="form-group inputBox">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" data-required>
-                        <div class="invalid-feedback">
-                            Please enter a password.
-                        </div>
-                    </div>
-
-                    <div class="form-group inputBox">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirm-password" name="confirm-password"
-                            data-required>
-                        <div class="invalid-feedback">
-                            Please confirm your password.
-                        </div>
-                    </div>
-
-                    <div class="inputBox">
-                        <input type="submit" name="submit" class="btn" style="width: 100%;" value="Register">
-                    </div>
-
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-
 
     </section>
 

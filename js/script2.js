@@ -1,5 +1,6 @@
 const form = document.getElementById("register-form");
-const fullName = document.getElementById("full-name");
+const firstName = document.getElementById("first-name");
+const lasttName = document.getElementById("last-name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const gender = document.getElementById("gender");
@@ -31,7 +32,8 @@ requiredFields.forEach((field) => {
 
 form.addEventListener("submit", function (event) {
   if (
-    validateInput(fullName) &&
+    validateInput(firstName) &&
+    validateInput(lasttName) &&
     validateInput(email) &&
     validateInput(phone) &&
     validateInput(gender) &&

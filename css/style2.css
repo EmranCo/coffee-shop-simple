@@ -11,7 +11,7 @@
   .invalid-feedback {
     display: none;
     color: #dc3545;
-    font-size: 60%;
+    font-size: 12px;
     margin-top: 0.25rem;
   }
   
@@ -74,16 +74,28 @@
   .swal2-popup {
     border-radius: 10px;
     font-size: 2rem !important;
-
+    padding: 30px !important;
   }
   
   .swal2-title {
-    font-size: 24px;
+    font-size: 35px;
     margin: 20px 0;
   }
   
   .swal2-content {
     font-size: 18px;
   }
+
+  .swal2-html-container
+  {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
+
+  .swal2-styled.swal2-confirm {
+    font-size: 18px;
+    width: 200px;
+    height: 45px;
+}
   
 
